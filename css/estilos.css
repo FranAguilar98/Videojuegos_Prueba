@@ -59,10 +59,18 @@ body {
     color: white;
 }
 
-.tittle {
-    font-size: 3rem;        
-    font-weight: 900;       
-    color: white;
+.header div {
+    margin: 10px 0;
+}
+
+.header div:nth-of-type(1) {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
+.header div:nth-of-type(2) {
+    font-size: 1.1rem;
+    font-weight: normal;
 }
 
 .imagen-principal {
@@ -129,7 +137,7 @@ body {
     border-radius: 8px;
 }
 
-.juego-card >div:nth-child(1) {
+.juego-card > div:nth-child(1) {
     color: white;
     font-weight: bold;
     font-size: large;
@@ -137,14 +145,14 @@ body {
     text-align: center;
 }
 
-.juego-card >div:nth-child(2) {
+.juego-card > div:nth-child(3) {
     color: #cccccc;
     font-size: small;
     text-align: center;
     margin: 8px 0;
 }
 
-.juego-card >div:nth-child(3) {
+.juego-card > div:nth-child(4) {
     color: white;
     font-weight: bold;
     font-size: large;
@@ -171,18 +179,29 @@ body {
     background: #1a1a1a;
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
+
+.menu div {
+    margin: 5px;
+    padding: 5px;
+    font-weight: bold;
+    color: white;
+}
+
+.menu div:nth-of-type(1) {
+    font-size: x-large;
+}
+
 .categoria {
-    margin: 12px 15px;
     background-color: #2a2a2a;
-     border: 1px solid #444444;
     border-radius: 8px;
-    padding: 10px 15px;
     transition: background-color 0.2s;
 }
 
 .categoria:hover {
     background-color: #6b4c9a;
+    cursor: pointer;
 }
 
 .categoria a {
