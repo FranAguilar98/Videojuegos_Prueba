@@ -1,0 +1,208 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif, sans-serif;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-areas:
+        "h h"
+        "m p"
+        "f f";
+    grid-template-columns: 1fr 5fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    gap: 0;
+}
+
+@media (max-width: 600px) {
+    .contenedor {
+        grid-template-areas:
+            'h'
+            'i'
+            'm'
+            'p'
+            'f';
+        gap: 0;
+    }
+
+    .footer {
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 601px) {
+    .contenedor {
+        grid-template-areas:
+            'h h h h h h'
+            'i i i i i i'
+            'm p p p p p'
+            'f f f f f f';
+
+        grid-template-rows: auto auto 1fr auto;
+        gap: 0;
+    }
+}
+.header {
+    grid-area: h;
+    background: linear-gradient(to bottom, #5a3d7a, #1a1a1a);
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+.tittle {
+    font-size: 3rem;        
+    font-weight: 900;       
+    color: white;
+}
+
+.imagen-principal {
+    grid-area: i;
+    margin: 0;
+    padding: 0;
+}
+
+.imagen-portada {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    object-position: center 60%;   
+    display: block;
+  
+}
+
+.imagen-cont {
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+}
+
+.imagen-cont img {
+    display: block;
+}
+
+.principal { 
+    grid-area: p;
+    background-color: #1a1a1a;
+    color: white;   
+ }
+
+ .juegos-cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+    padding: 20px;
+    min-height: 100%;
+}
+
+.juego-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2a2a2a;
+    border: 1px solid #444444;
+    border-radius: 10px;
+    padding: 15px;
+    width: 220px;
+    transition: background-color 0.3s;
+}
+
+.juego-card:hover {
+    background-color: #5a3d7a;
+}
+
+.juego-card img {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.juego-card >div:nth-child(1) {
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.juego-card >div:nth-child(2) {
+    color: #cccccc;
+    font-size: small;
+    text-align: center;
+    margin: 8px 0;
+}
+
+.juego-card >div:nth-child(3) {
+    color: white;
+    font-weight: bold;
+    font-size: large;
+    margin-top: 5px;
+}
+
+.juego-card button {
+    margin-top: 10px;
+    background-color: #6b4c9a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.juego-card button:hover {
+    background-color: #6b4c9a;
+}
+
+ .menu {
+    grid-area: m;
+    background: #1a1a1a;
+    display: flex;
+    flex-direction: column;
+}
+.categoria {
+    margin: 12px 15px;
+    background-color: #2a2a2a;
+     border: 1px solid #444444;
+    border-radius: 8px;
+    padding: 10px 15px;
+    transition: background-color 0.2s;
+}
+
+.categoria:hover {
+    background-color: #6b4c9a;
+}
+
+.categoria a {
+    color: white;
+    text-decoration: none;
+    font-size: large;
+    display: block;
+}
+.footer {
+    grid-area: f;
+    background: linear-gradient(to bottom, #1a1a1a, #5a3d7a);
+    padding: 20px;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#pie-pagina {
+    border-top: 3px solid #5a3d7a;
+}
